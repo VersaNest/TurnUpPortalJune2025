@@ -32,5 +32,14 @@ public class Program
             Console.WriteLine("User not logged in successfully");
         }
 
+        //Select time and materials from administration 
+        IWebElement administrationTab = driver.FindElement(By.XPath("//ul[@class='nav navbar-nav']//a[@class='dropdown-toggle']"));
+        Thread.Sleep(3000);
+        administrationTab.Click();
+        IWebElement timeAndMaterialsOption = driver.FindElement(By.XPath("//ul[@class='nav navbar-nav']//a[@href='/TimeMaterial']"));
+        Thread.Sleep(3000);
+        timeAndMaterialsOption.Click();
+
+
     }
 }
